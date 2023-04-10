@@ -1,0 +1,71 @@
+.ce-taginput {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.ce-taginput .tag-wrapper {
+  background-color: #edf2f7;
+  border: 1px solid #c6dbf0;
+  color: #4a5568;
+  border-radius: 0.2em;
+  font-weight: 500;
+  cursor: default;
+  height: 25px;
+  display: inline-block;
+}
+.ce-taginput .tag-wrapper > span {
+  height: 100%;
+  display: inline-block;
+}
+
+.ce-taginput .tag-text {
+  padding-left: 0.2em;
+  cursor: default;
+}
+
+.ce-taginput .tag-text img {
+  width: 18px;
+  border: none;
+  height: 18px;
+  margin: 0px 2px 3px 0px;
+  vertical-align: middle;
+}
+
+.ce-taginput .tag-text-right-padding {
+  padding-right: 0.4em;
+}
+
+.ce-taginput > p {
+  margin: 0;
+  text-align: left;
+}
+
+.ce-taginput .tag-del {
+  cursor: pointer;
+  padding: 0px 3px;
+  font-size: 1em;
+  background-color: transparent;
+  border-radius: 0%;
+  color: #4a5568;
+}
+
+.ce-taginput .tag-del:hover {
+  background-color: #c8d4e4;
+  border: none;
+}
+
+.ce-taginput ::-moz-selection {
+  background: #b3d7ff;
+}
+
+.ce-taginput ::selection {
+  background: #b3d7ff;
+}

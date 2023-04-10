@@ -1,0 +1,36 @@
+{
+  "name": "taginput",
+  "version": "0.0.1",
+  "description": "content-editable tag input textbox",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradeep-mishra/taginput.git"
+  },
+  "keywords": [
+    "contenteditable",
+    "taginput",
+    "react",
+    "slate"
+  ],
+  "author": "pradeep23octgmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pradeep-mishra/taginput/issues"
+  },
+  "homepage": "https://github.com/pradeep-mishra/taginput#readme",
+  "devDependencies": {
+    "react": ">=16.8.0",
+    "slate": ">=0.65.3",
+    "slate-react": ">=0.93.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "slate": ">=0.65.3",
+    "slate-react": ">=0.93.0"
+  }
+}
