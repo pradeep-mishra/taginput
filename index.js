@@ -179,7 +179,7 @@ const parseInitValue = (value) => {
 
 const TagInput = ({
   onValueChange = () => {},
-  removeTagButton = true,
+  removeTagButton = false,
   initValue,
   addImageElement,
   transformInputText,
