@@ -11,13 +11,13 @@
 To use TagInput in your React project, simply install it via NPM:
 
 ```shell
-npm install taginput
+npm install @pradeepmishra/taginput
 ```
 
 Then, import it into your project:
 
 ```jsx
-import TagInput from 'taginput';
+import TagInput from '@pradeepmishra/taginput';
 ```
 
 ### Usage
