@@ -1,12 +1,12 @@
 # TagInput
 
-###### TagInput is a customizable React component that provides an input field for entering both simple text and tags in content-editable text input.
+#### TagInput is a customizable React component that provides an input field for entering both simple text and tags in content-editable text input.
 
 ###### With TagInput, you can easily create tag input fields for your web applications without having to worry about complex implementation details.
 
 <br>
 
-##### Installation
+### Installation
 
 To use TagInput in your React project, simply install it via NPM:
 
