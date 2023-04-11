@@ -20,6 +20,16 @@ Then, import it into your project:
 import TagInput from '@pradeepmishra/taginput';
 ```
 
+### Peer Dependencies
+
+TagInput has peer dependencies of the following npm libraries
+
+1. react
+2. slate
+3. slate-react
+
+make sure you have them all in your project's dependencies.
+
 ### Usage
 
 TagInput can be used like any other React component, with props for customization:
