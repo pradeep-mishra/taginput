@@ -1,6 +1,6 @@
 {
   "name": "@pradeepmishra/taginput",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "content-editable tag input textbox",
   "type": "module",
   "scripts": {
@@ -17,7 +17,8 @@
     "slate"
   ],
   "files": [
-    "dist"
+    "dist",
+    "assets"
   ],
   "sideEffects": [
     "*.css"
