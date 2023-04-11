@@ -66,7 +66,7 @@ Pradeep Mishra
 
 ### Rendered view
 
-![Rendered Component](./assets/ss.png)
+![Rendered Component](/assets/ss.png)
 
 ### Demo site
 
