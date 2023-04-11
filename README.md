@@ -52,10 +52,15 @@ TagInput can be used like any other React component, with props for customizatio
 ### Props
 
 `removeTagButton`: Boolean (optional) - hide the delete button in all tags (default: false).
+
 `initValue`: String (optional) - provides an initial value for the input field (default: "").
+
 `onValueChange`: Function (optional) - called when the value of the input field changes. The new value is passed as an argument to the function.
+
 `addImageElement`: Function (optional) - called when a new tag is added. The content of the tag is passed as an argument to the function, and the function should return a valid HTML element to be displayed in the tag.
+
 `transformInputText`: Function (optional) - called when a new tag is added. The content of the tag is passed as an argument to the function, and the function should return a transformed string to be displayed in the tag.
+
 `transformInputElement`: Function (optional) - called when a new tag is added. The content of the tag is passed as an argument to the function, and the function should return a transformed HTML element to be displayed in the tag.
 
 ### License
