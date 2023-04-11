@@ -60,9 +60,6 @@ Pradeep Mishra
 [Twitter](https://twitter.com/ipradeepmishra)
 [Linkedin](https://www.linkedin.com/in/ipradeepmishra/)
 
-#### Demo site
-
-[https://taginput.netlify.app](https://taginput.netlify.app)
 
 ### Rendered view
 
