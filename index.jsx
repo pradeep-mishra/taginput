@@ -244,5 +244,4 @@ const TagInput = ({
   );
 };
 
-export { getPlainText, getContentArray };
-export default TagInput;
+export { getPlainText, getContentArray, TagInput };
