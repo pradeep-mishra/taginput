@@ -27,7 +27,7 @@ const findTag = (content) => {
 };
 
 const insertTagField = (editor, value, options) => {
-  const mappedField = [
+  const tagField = [
     {
       type: 'tag',
       value,
@@ -35,7 +35,7 @@ const insertTagField = (editor, value, options) => {
     },
     { text: '' }
   ];
-  Transforms.insertNodes(editor, mappedField, options);
+  Transforms.insertNodes(editor, tagField, options);
 };
 
 const addToPath = (path, incrBy) => {
@@ -92,7 +92,6 @@ const TopPElement = ({ attributes, element, children }) => (
 );
 
 const withTag = (editor) => {
-  window._editor = editor;
   const { isInline, isVoid, normalizeNode, deleteBackward } = editor;
 
   editor.isInline = (element) => {
