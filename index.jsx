@@ -9,10 +9,10 @@ import {
 } from 'slate-react';
 import './index.css';
 
-const BADGE_TESTER = /\{\{([^}]+)\}\}/;
+const TAG_TESTER = /{{(\s?[^\s^{]+?.*?\s*?)}}/;
 
 const findTag = (content) => {
-  const match = BADGE_TESTER.exec(content);
+  const match = TAG_TESTER.exec(content);
   if (!match) {
     return null;
   }
@@ -159,7 +159,7 @@ const strToElm = (value) => {
     return [{ text: '' }];
   }
   return value
-    .split(BADGE_TESTER)
+    .split(TAG_TESTER)
     .map((val, i) =>
       i % 2
         ? { type: 'tag', value: val, children: [{ text: val }] }
