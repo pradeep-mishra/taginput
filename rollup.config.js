@@ -1,7 +1,9 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
+
 import * as packageJson from './package.json';
 
 export default [
@@ -42,7 +44,8 @@ export default [
         extensions: ['.js', '.jsx'],
         babelrc: false
       }),
-      postcss()
+      postcss(),
+      terser()
     ]
   }
 ];
