@@ -63,6 +63,8 @@ TagInput can be used like any other React component, with props for customizatio
 
 `transformInputElement`: Function (optional) - called when a new tag is added. The content of the tag is passed as an argument to the function, and the function should return a transformed HTML element to be displayed in the tag.
 
+`capturePattern`: RegExp (optional) - Provide a regex pattern to capture text to identify a tag.
+
 ### License
 
 TagInput is released under the MIT License.

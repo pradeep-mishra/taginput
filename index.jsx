@@ -9,10 +9,10 @@ import {
 } from 'slate-react';
 import './index.css';
 
-const TAG_TESTER = /{{(\s?[^\s^{]+?.*?\s*?)}}/;
+const TAG_TESTER = /{{(.*?)}}/;
 
-const findTag = (content) => {
-  const match = TAG_TESTER.exec(content);
+const findTag = (content, capturePattern) => {
+  const match = capturePattern.exec(content);
   if (!match) {
     return null;
   }
@@ -91,7 +91,7 @@ const TopPElement = ({ attributes, element, children }) => (
   <p {...attributes}>{children}</p>
 );
 
-const withTag = (editor) => {
+const withTag = (editor, capturePattern) => {
   const { isInline, isVoid, normalizeNode, deleteBackward } = editor;
 
   editor.isInline = (element) => {
@@ -108,7 +108,7 @@ const withTag = (editor) => {
       return;
     }
     const contents = Node.string(node);
-    const tag = findTag(contents);
+    const tag = findTag(contents, capturePattern);
     if (tag) {
       const { tagContent, tagLength, tagStartIndex, isTagLastItem } =
         tag;
@@ -153,12 +153,12 @@ const getPlainText = (content) => {
   return getContentArray(content).join('');
 };
 
-const strToElm = (value) => {
+const strToElm = (value, capturePattern) => {
   if (!value) {
     return [{ text: '' }];
   }
   return value
-    .split(TAG_TESTER)
+    .split(capturePattern)
     .map((val, i) =>
       i % 2
         ? { type: 'tag', value: val, children: [{ text: val }] }
@@ -166,12 +166,12 @@ const strToElm = (value) => {
     );
 };
 
-const parseInitValue = (value) => {
+const parseInitValue = (value, capturePattern) => {
   return [
     {
       type: 'paragraph',
       className: 'textbox',
-      children: strToElm(String(value))
+      children: strToElm(String(value), capturePattern)
     }
   ];
 };
@@ -182,13 +182,20 @@ const TagInput = ({
   initValue,
   addImageElement,
   transformInputText,
-  transformInputElement
+  transformInputElement,
+  capturePattern = TAG_TESTER
 }) => {
+  if (!capturePattern instanceof RegExp) {
+    throw new Error('capturePattern must be a RegExp');
+  }
   const editor = useMemo(
-    () => withTag(withReact(createEditor())),
+    () => withTag(withReact(createEditor()), capturePattern),
     []
   );
-  const [value, setValue] = useState(parseInitValue(initValue));
+  const [value, setValue] = useState(
+    parseInitValue(initValue),
+    capturePattern
+  );
   let lastValue = initValue;
 
   const renderElement = useCallback(

@@ -1,6 +1,6 @@
 {
   "name": "@pradeepmishra/taginput",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "content-editable tag input textbox",
   "type": "module",
   "scripts": {
